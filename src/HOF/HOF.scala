@@ -18,10 +18,11 @@ object FunctionReturningFunction extends App {
   // Higher-order function that returns a new function
   // The returned function adds a specific number to its input
   def createAdder(addend: Int): Int => Int = {
-    x => x + addend // Lambda expression returning a function that adds 'addend' to its input
+    x => x + addend // Lambda expression
   }
 
   // Create an 'adder' function that adds 5 to its input
+  //addend = 5 is a closure
   val addFive: Int => Int = createAdder(5)
 
   // Use the 'addFive' function
